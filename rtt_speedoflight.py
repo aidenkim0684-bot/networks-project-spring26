@@ -66,10 +66,17 @@ def measure_rtt(url: str, probes: int = PROBES) -> dict:
         7. If ALL probes lost, return None for all stats.
     """
     samples = []
-    lost    = 0
+    lost = 0
 
     for _ in range(probes):
-        # TODO: send probe
+        start = time.perf_counter()
+        try:
+            urllib.request.urlopen(url, timeout=3)
+            elapsed_ms = (time.perf_counter() - start) * 1000
+            samples.append(elapsed_ms)
+        except:
+            lost += 1
+
         time.sleep(0.2)
 
     if not samples:
@@ -77,7 +84,13 @@ def measure_rtt(url: str, probes: int = PROBES) -> dict:
                 "loss_pct": 100.0, "samples": []}
 
     # TODO: compute and return stats
-    return {}  # placeholder
+    return {
+        "min_ms": min_ms,
+        "mean_ms": mean_ms,
+        "median_ms": median_ms,
+        "loss_pct": (lost / probes) * 100,
+        "samples": samples
+    }  # placeholder
 
 
 # ─────────────────────────────────────────────

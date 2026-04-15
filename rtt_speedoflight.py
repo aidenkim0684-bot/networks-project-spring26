@@ -24,6 +24,14 @@ TARGETS = {
     "Mumbai":       {"url": "http://www.google.co.in",   "coords": (19.0760,   72.8777), "continent": "Asia"},
     "London":       {"url": "http://www.google.co.uk",   "coords": (51.5074,   -0.1278), "continent": "Europe"},
     "Singapore":    {"url": "http://www.google.com.sg",  "coords": (1.3521,   103.8198), "continent": "Asia"},
+    "Sendai":       {"url": "http://www.tohoku.ac.jp", "coords": (35.6762, 139.6503), "continent": "Asia"}, 
+    "Seoul":        {"url": "http://www.snu.ac.kr", "coords": (35.6762, 139.6503), "continent": "Asia"}, 
+    "New Delhi":    {"url": "http://www.iitd.ac.in", "coords": (35.6762, 139.6503), "continent": "Asia"}, 
+    "Santiago":     {"url": "http://www.uchile.cl", "coords": (35.6762, 139.6503), "continent": "S. America"}, 
+    "Johannesburg": {"url": "http://www.wits.ac.za", "coords": (35.6762, 139.6503), "continent": "Africa"}, 
+    "Berlin":       {"url": "http://www.fu-berlin.de", "coords": (35.6762, 139.6503), "continent": "Europe"}, 
+    "London":       {"url": "http://www.imperial.ac.uk", "coords": (35.6762, 139.6503), "continent": "Europe"}, 
+    "Canberra":     {"url": "http://www.anu.edu.au", "coords": (35.6762, 139.6503), "continent": "Oceania"}
 }
 
 PROBES           = 15
